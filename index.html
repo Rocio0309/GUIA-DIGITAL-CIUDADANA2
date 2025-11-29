@@ -1,275 +1,160 @@
 <!DOCTYPE html>
 <script src="CHIO.JS"></script>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menú Estético Celular</title>
+<head> 
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Menú con Submenú</title>
+ <!-- Fuente Raleway -->
+ <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+ <style>
+   body {
+      margin: 0;
+      font-family: 'Raleway', Arial, sans-serif;
+      background: #f9f9f9;
+      overflow-x: hidden;
+   }
 
-<!-- Fuente Raleway -->
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+   /* ---- ESTILO DEL MENU PRINCIPAL ---- */
+   nav {
+      background: #E74C3E50;
+      position: relative;
+      padding-left: 60px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      z-index: 10;
+   }
 
-<style>
-  body {
-    margin: 0;
-    font-family: 'Raleway', Arial, sans-serif;
-    background: #f9f9f9;
-    overflow-x: hidden;
-  }
-
-  /* ---- MENU COMPUTADORA ---- */
-  nav {
-    background: rgba(231, 76, 60, 0.5);
-    position: relative;
-    padding-left: 60px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    z-index: 20;
-  }
-
-  nav img.logo {
-    position: absolute;
-    top: 15px;
-    left: 10px;
-    width: 40px;
-    height: auto;
-  }
-
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-
-  nav ul li {
-    position: relative;
-    text-align: center;
-  }
-
-  nav ul li a {
-    display: block;
-    padding: 12px 22px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    background: #B19CD9;
-    border-radius: 25px;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-  }
-
-  nav ul li a:hover {
-    background: #D8BFD8;
-    transform: translateY(-2px);
-    box-shadow: 0px 6px 10px rgba(0,0,0,0.25);
-  }
-
-  nav ul li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #D8BFD8;
-    padding: 5px;
-    min-width: 180px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-  }  
-
-  nav ul li ul li a {
-    padding: 10px 15px;
-    color: white;
-    background: transparent;
-    border-radius: 15px;
-  }
-
-  nav ul li ul li a:hover {
-    background: #B19CD9;
-    color: white;
-  }
-
-  nav ul li:hover > ul {
-    display: block;
-  }
-
-  /* Imagen computadora normal */
-  .hero-image {
-    width: 100%;
-    height: auto;
-    max-height: calc(115vh - 70px);
-    object-fit: contain;
-    display: block;
-    z-index: 0;
-  }
-
-  /* Contenedor contenido */
-  .contenido {
-    position: relative;
-    z-index: 10;
-    margin-top: 70px;
-    padding: 15px;
-  }
-
-  /* DUDAS */
-  .icono-dudas {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .icono-dudas:hover {
-    transform: scale(1.15);
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.25);
-  }
-
-  .texto-dudas {
-    font-size: 10.5px;
-    color: white;
-    font-weight: 600;
-    margin-top: 1px;
-    text-align: center;
-  }
-
-  .dudas-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-  }
-
-  /* ===========================
-     RESPONSIVE CELULAR - ESTILO APP
-  ============================ */
-  @media (max-width: 850px) {
-
-    .hamburger {
-      display: block;
+   /* Imagen del logo */
+   nav img.logo {
       position: absolute;
-      right: 20px;
-      font-size: 32px;
-      color: #ffffff;
-      cursor: pointer;
-      z-index: 30;
-    }
-
-    nav {
+      top: 15px;
+      left: 10px;
+      width: 40px;
       height: auto;
-      padding: 20px; /* más grande */
-      background: #E74C3E50; /* color original de tu menú */
-      border-bottom-left-radius: 15px;
-      border-bottom-right-radius: 15px;
+   }
+
+   nav ul {
+       list-style: none;
+       margin: 0;
+       padding: 0;
+       display: flex;
+       gap: 10px;
+       align-items: center;
+   }
+
+   nav ul li {
+       position: relative;
+       text-align: center;
+   }
+
+   nav ul li a {
+       display: block;
+       padding: 12px 22px;
+       color: white;
+       text-decoration: none;
+       font-weight: 600;
+       background: #B19CD9;
+       border-radius: 25px;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+       transition: all 0.3s ease;
+   }
+
+   nav ul li a:hover {
+       background: #D8BFD8;
+       transform: translateY(-2px);
+       box-shadow: 0px 6px 10px rgba(0,0,0,0.25);
+   }
+
+   nav ul li ul {
+       display: none;
+       position: absolute;
+       top: 100%;
+       left: 0;
+       background: #D8BFD8;
+       padding: 5px;
+       min-width: 180px;
+       border-radius: 12px;
+       box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+   }  
+
+   nav ul li ul li a {
+       padding: 10px 15px;
+       color: white;
+       background: transparent;
+       border-radius: 15px;
+   }
+
+   nav ul li ul li a:hover {
+       background: #B19CD9;
+       color: white;
+   }
+
+   nav ul li:hover > ul {
+       display: block;
+   }
+
+   /* ---- IMAGEN DEBAJO DEL MENÚ ---- */
+   .hero-image {
+      width: 100%;
+      height: calc(115vh - 70px);
+      object-fit: cover;
+      display: block;
+   }
+
+   /* ---- BOTÓN DE IMAGEN (DUDAS) ---- */
+   .icono-dudas {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+   }
+
+   .icono-dudas:hover {
+      transform: scale(1.15);
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.25);
+   }
+
+   .texto-dudas {
+      font-size: 10.5px;
+      color: white;
+      font-weight: 600;
+      margin-top: 1px;
+      display: block;
+      text-align: center;
+   }
+
+   /* ---- CONTENEDOR DEL ENLACE DUDAS ---- */
+   .dudas-link {
+      display: flex;
       flex-direction: column;
       align-items: center;
-      font-weight: bold; /* encabezado más “grueso” */
-    }
-
-    nav ul {
-      flex-direction: column;
-      width: 100%;
-      display: none;
-      padding: 10px 0;
-      gap: 10px;
-      border-radius: 10px;
-      background: #B19CD9; /* color original submenu */
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    nav ul li {
-      width: 100%;
-    }
-
-    nav ul li a {
-      width: 100%;
-      text-align: center;
-      padding: 16px 0;
-      font-size: 18px;
-      border-radius: 15px;
-      background: #B19CD9; /* color original */
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    nav ul li a:hover {
-      background: #D8BFD8; /* color hover original */
-      transform: translateY(0);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    nav ul li ul {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 100%;
-      display: none;
-      background: #D8BFD8; /* color original submenu */
-      border-radius: 12px;
-      padding: 5px 0;
-    }
-
-    nav ul li:hover > ul {
-      display: block;
-    }
-
-    /* Imagen extendida celular tipo app */
-    .hero-image {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 200vh;
-      object-fit: cover;
-      filter: blur(1px) brightness(1.1);
-      z-index: 0;
-    }
-
-    .contenido {
-      position: relative;
-      z-index: 10;
-      margin-top: 90px; /* espacio mayor por encabezado más grande */
-      padding: 15px;
-    }
-
-    .dudas-link {
-      margin-top: 10px;
-    }
-  }
-</style>
-
-<script>
-function toggleMenu() {
-  const menu = document.getElementById("menu");
-  menu.style.display = (menu.style.display === "flex" || menu.style.display === "") ? "none" : "flex";
-}
-</script>
-
+      justify-content: center;
+      text-decoration: none;
+      background: transparent;
+   }
+ </style> 
 </head>
 <body>
-
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-
+  <!-- Menu principal -->
   <nav>
-    <img src="LOGOCECY.png" alt="Logo" class="logo">
-
-    <form method="get" action="https://www.google.com/search" target="_blank" style="margin-left:60px; margin-top:10px;">
-        <input type="search" name="q" placeholder="Buscar..." autofocus required>
+    <img src="LOGOCECY.PNG" alt="Logo" class="logo">
+    <form method="get" action="https://www.google.com/search" target="_blank">
+        <input type="search" name="q" placeholder="introducir busqueda" autofocus required>
         <input type="submit">
     </form>
-
-    <ul id="menu">
+<ul>
       <li><p><a href="ciudadano2.html">CIUDADANO</a></p></li>
       <li> 
         <p><a href="#">INFORMACION</a></p>
         <ul>
           <li><a href="INFO.html">INFORMACION</a></li>
-          <li><a href="GALERIAMP4.html">¿Cómo realizar trámites?</a></li>
+          <li><a href="GALERIAMP4.html">¿Como relizar tramites?</a></li>
+          <li><a href="#">.......</a></li>
         </ul>
       </li>
       <li> 
@@ -277,6 +162,7 @@ function toggleMenu() {
         <ul>
           <li><a href="tramites.html">Ciudadanos administrativos</a></li>
           <li><a href="gestionartramite.html">Gestionar Trámite</a></li>
+          <li><a href="#">.......</a></li>
         </ul>
       </li>
       <li><p><a href="SOLICITUD.html">SOLICITUD</a></p></li>
@@ -284,23 +170,31 @@ function toggleMenu() {
         <p><a href="#">PAGO</a></p>
         <ul>
           <li><a href="PAGOS.html">Servicios y derechos</a></li>
+          <li><a href="">.......</a></li>
+          <li><a href="#">.......</a></li>
         </ul>
       </li>
       <li>  
         <p><a href="#">DOCUMENTOS</a></p>
         <ul>
           <li><a href="GALERIA.html">Galería</a></li>
+          <li><a href="#">.......</a></li>
+          <li><a href="#">.......</a></li>
         </ul>
       </li>
       <li>
         <p><a href="MENU.html">VISITANTES</a></p>
         <ul>
           <li><a href="index2.html">Registros</a></li>
+          <li><a href="#">.......</a></li>
+          <li><a href="#">.......</a></li>
         </ul>
       </li>
       <li>
          <p><a href="https://share.google/Q5YCviwYntzpR3B4T">AYUNTAMIENTO 2025</a></p>
       </li>
+
+      <!-- 🔹 Botón de DUDAS más pequeño y centrado -->
       <li>
         <a href="index3.html" class="dudas-link">
           <img src="DUDA.png" alt="Dudas" class="icono-dudas">
@@ -310,12 +204,7 @@ function toggleMenu() {
     </ul>
   </nav>
 
+  <!-- Imagen grande debajo del menú -->
   <img src="IMGC.png" alt="Imagen grande" class="hero-image">
-
-  <div class="contenido">
-    <!-- Contenido de tu página -->
-    <p>Aquí tu contenido principal...</p>
-  </div>
-
 </body>
 </html>
