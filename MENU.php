@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<script src="CHIO.JS"></script>
+<html lang="es">
+<head> 
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Menú con Submenú</title>
+ <!-- Fuente Raleway -->
+ <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+ <style>
+   body {
+      margin: 0;
+      font-family: 'Raleway', Arial, sans-serif;
+      background: #f9f9f9;
+      overflow-x: hidden;
+   }
+
+   /* ---- ESTILO DEL MENU PRINCIPAL ---- */
+   nav {
+      background: #E74C3E50;
+      position: relative;
+      padding-left: 60px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      z-index: 10;
+   }
+
+   /* Imagen del logo */
+   nav img.logo {
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      width: 40px;
+      height: auto;
+   }
+
+   nav ul {
+       list-style: none;
+       margin: 0;
+       padding: 0;
+       display: flex;
+       gap: 10px;
+       align-items: center;
+   }
+
+   nav ul li {
+       position: relative;
+       text-align: center;
+   }
+
+   nav ul li a {
+       display: block;
+       padding: 12px 22px;
+       color: white;
+       text-decoration: none;
+       font-weight: 600;
+       background: #B19CD9;
+       border-radius: 25px;
+       box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+       transition: all 0.3s ease;
+   }
+
+   nav ul li a:hover {
+       background: #D8BFD8;
+       transform: translateY(-2px);
+       box-shadow: 0px 6px 10px rgba(0,0,0,0.25);
+   }
+
+   nav ul li ul {
+       display: none;
+       position: absolute;
+       top: 100%;
+       left: 0;
+       background: #D8BFD8;
+       padding: 5px;
+       min-width: 180px;
+       border-radius: 12px;
+       box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+   }  
+
+   nav ul li ul li a {
+       padding: 10px 15px;
+       color: white;
+       background: transparent;
+       border-radius: 15px;
+   }
+
+   nav ul li ul li a:hover {
+       background: #B19CD9;
+       color: white;
+   }
+
+   nav ul li:hover > ul {
+       display: block;
+   }
+
+   /* ---- IMAGEN DEBAJO DEL MENÚ ---- */
+   .hero-image {
+      width: 100%;
+      height: calc(115vh - 70px);
+      object-fit: cover;
+      display: block;
+   }
+
+   /* ---- BOTÓN DE IMAGEN (DUDAS) ---- */
+   .icono-dudas {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+   }
+
+   .icono-dudas:hover {
+      transform: scale(1.15);
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.25);
+   }
+
+   .texto-dudas {
+      font-size: 10.5px;
+      color: white;
+      font-weight: 600;
+      margin-top: 1px;
+      display: block;
+      text-align: center;
+   }
+
+   /* ---- CONTENEDOR DEL ENLACE DUDAS ---- */
+   .dudas-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      background: transparent;
+   }
+ </style> 
+</head>
+<body>
+  <!-- Menu principal -->
+  <nav>
+    <img src="LOGOCECY.PNG" alt="Logo" class="logo">
+    <form method="get" action="https://www.google.com/search" target="_blank">
+        <input type="search" name="q" placeholder="introducir busqueda"autofocus required>
+        <input type="submit">
+    </form>
+<ul>
+      <li><p><a href="ciudadano2.html">CIUDADANO</a></p></li>
+      <li> 
+        <p><a href="#">INFORMACION</a></p>
+        <ul>
+          <li><a href="INFO.PHP">INFORMACION</a></li>
+          <li><a href="GALERIAMP4.PHP">¿Como relizar tramites?</a></li>
+          <li><a href="#">.......</a></li>
+        </ul>
+      </li>
+      <li> 
+        <p><a href="#">TRÁMITES</a></p>
+        <ul>
+          <li><a href="tramites.html">Ciudadanos administrativos</a></li>
+          <li><a href="gestionartramite.php">Gestionar Trámite</a></li>
+          <li><a href="#">.......</a></li>
+        </ul>
+      </li>
+      <li><p><a href="SOLICITUD.html">SOLICITUD</a></p></li>
+      <li>  
+        <p><a href="#">PAGO</a></p>
+        <ul>
+          <li><a href="PAGOS.PHP">Servicios y derechos</a></li>
+          <li><a href="">.......</a></li>
+          <li><a href="#">.......</a></li>
+        </ul>
+      </li>
+      <li>  
+        <p><a href="#">DOCUMENTOS</a></p>
+        <ul>
+          <li><a href="GALERIA.html">Galería</a></li>
+          <li><a href="#">.......</a></li>
+          <li><a href="#">.......</a></li>
+        </ul>
+      </li>
+      <li>
+        <p><a href="MENU.php">VISITANTES</a></p>
+        <ul>
+          <li><a href="index2.php">Registros</a></li>
+          <li><a href="#">.......</a></li>
+          <li><a href="#">.......</a></li>
+        </ul>
+      </li>
+      <li>
+         <p><a href="https://share.google/Q5YCviwYntzpR3B4T">AYUNTAMIENTO 2025</a></p>
+      </li>
+
+      <!-- 🔹 Botón de DUDAS más pequeño y centrado -->
+      <li>
+        <a href="index3.php" class="dudas-link">
+          <img src="DUDA.png" alt="Dudas" class="icono-dudas">
+          <span class="texto-dudas">DUDAS</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Imagen grande debajo del menú -->
+  <img src="IMGC.png" alt="Imagen grande" class="hero-image">
+</body>
+</html>

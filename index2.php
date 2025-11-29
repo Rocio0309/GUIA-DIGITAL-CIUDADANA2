@@ -1,0 +1,29 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUIA CIUDADANA VISITANTES</title>
+    <!-- Enlazamos solo el CSS del formulario -->
+    <link rel="stylesheet" type="text/css" href="estilos_formulario.css">
+</head>
+<body>
+
+    <h1 class="titulo">GUIA CIUDADANA VISITANTES</h1>
+
+    <!-- Le ponemos un ID para que el CSS lo aplique específicamente -->
+    <form id="form-visitante" method="post" action="registrar2.php">
+        <h2>REGISTRAR VISITA</h2>
+        
+        <input type="text" name="NOMBRE" placeholder="Nombre" required>
+        <input type="text" name="A_PATERNO" placeholder="Apellido Paterno" required>
+        <input type="text" name="A_MATERNO" placeholder="Apellido Materno" required>
+        <input type="text" name="LOCALIDADCOMUNIDAD" placeholder="Localidad / Comunidad" required>
+        <input type="text" name="MUNICIPIO" placeholder="Municipio" required>
+        
+        <input type="submit" name="registrar" value="Registrar">
+    </form>
+
+</body>
+</html>
+

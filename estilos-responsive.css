@@ -1,0 +1,130 @@
+/* 🌸 RESET GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🌸 PALETA DE COLORES */
+:root {
+  --rosa: #f8c8dc;
+  --morado: #d5c4f5;
+  --lila: #f3e8ff;
+  --texto: #4a4a4a;
+  --fondo: #fff;
+}
+
+/* 🌸 ESTILO GENERAL DEL CUERPO */
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  padding: 10px;
+  line-height: 1.5;
+}
+
+/* 🌸 CONTENEDORES UNIVERSALES */
+.contenedor,
+.container,
+.box,
+.seccion {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 15px;
+  background: var(--lila);
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* 🌸 ENCABEZADOS */
+h1, h2, h3 {
+  color: var(--morado);
+  margin-bottom: 10px;
+}
+
+/* 🌸 TEXTOS */
+p {
+  margin-bottom: 12px;
+}
+
+/* 🌸 IMÁGENES RESPONSIVAS */
+img, video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 🌸 MENÚ O NAVBAR */
+nav, .menu, .links {
+  width: 100%;
+  padding: 12px;
+  background: var(--rosa);
+  border-radius: 12px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a, .menu a, .links a {
+  text-decoration: none;
+  color: #5d3a76;
+  font-weight: 600;
+}
+
+/* 🌸 BOTONES */
+button, .btn {
+  background: var(--morado);
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* 🌸 FORMULARIOS */
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 2px solid var(--rosa);
+}
+
+/* 🌸 GALERÍA FLEXIBLE */
+.galeria, .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+/* 🌸 FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  background: var(--rosa);
+  border-radius: 12px;
+}
+
+/* 🌸 RESPONSIVE PARA CELULARES */
+@media (max-width: 600px) {
+
+  nav, .menu, .links {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  p { font-size: 16px; }
+
+  .contenedor, .container, .box {
+    padding: 12px;
+  }
+}

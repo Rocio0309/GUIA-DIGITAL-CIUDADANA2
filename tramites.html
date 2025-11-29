@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tramites</title>
+    <link rel="stylesheet" href="principal.css">
+      <link rel="icon" href="img/unnamed-removebg-preview.png" type="png">
+    <a href="OPDAPAS.html"></a>
+ 
+    <style>
+   
+        .fondo-valle{
+            background-image: linear-gradient(to top, #0593bb 20%, #0e26ae 80%);
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 80vh;
+            background-attachment: fixed;
+          }
+        .contenido-fondo-valle{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+      @keyframes move_wave {
+          0% {
+              transform: translateX(0) translateZ(0) scaleY(1)
+          }
+          50% {
+              transform: translateX(-25%) translateZ(0) scaleY(0.55)
+          }
+          100% {
+              transform: translateX(-50%) translateZ(0) scaleY(1)
+          }
+      }
+      .waveWrapper {
+          overflow: hidden;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 0;
+          margin: auto;
+      }
+      .waveWrapperInner {
+          position: absolute;
+          width: 100%;
+          overflow: hidden;
+          height: 70%;
+    
+          
+      }
+      .bgTop {
+          z-index: 15;
+          opacity: 0.5;
+      }
+      .bgMiddle {
+          z-index: 10;
+          opacity: 0.75;
+      }
+      .bgBottom {
+          z-index: 5;
+      }
+      .wave {
+          position: absolute;
+          left: 0;
+          width: 200%;
+          height: 100%;
+          background-repeat: repeat no-repeat;
+          background-position: 0 bottom;
+          transform-origin: center bottom;
+      }
+      .waveTop {
+          background-size: 50% 100px;
+      }
+      .waveAnimation .waveTop {
+        animation: move-wave 3s;
+         -webkit-animation: move-wave 3s;
+         -webkit-animation-delay: 1s;
+         animation-delay: 1s;
+      }
+      .waveMiddle {
+          background-size: 50% 120px;
+      }
+      .waveAnimation .waveMiddle {
+          animation: move_wave 10s linear infinite;
+      }
+      .waveBottom {
+          background-size: 50% 100px;
+      }
+      .waveAnimation .waveBottom {
+          animation: move_wave 15s linear infinite;
+      }
+      </style>
+      
+      
+        <script>
+        window.console = window.console || function(t) {};
+      </script>
+</head>
+<body>
+  <h1 style="text-align: center; font:-size: 50px; color:#A1B9A; margin-top: 20px;">
+    TRAMITES CIUDADANOS ADMINISTRATIVOS BASICOS.
+  </h1>
+  <section class="gal"><br>
+
+    <main id="galeria" class="galeria">
+        <div class="galeria_item">
+            <a href="SOLICITUD.png" data-lightbox="models" data-title="imagen1">
+            <img src="SOLICITUD.png" alt="">
+        </a>
+        </div>
+
+    <div class="galeria_item">
+        <a href="d1.jpg" data-lightbox="models" data-title="imagen2">
+        <img src="d1.jpg" alt="">
+    </a>
+    </div>
+
+    <div class="galeria_item">
+        <a href="INE.PNG" data-lightbox="models" data-title="imagen3">
+        <img src="INE.PNG" alt="">
+    </a>
+    </div>
+
+    <div class="galeria_item">
+        <a href="PASAPORTE.PNG" data-lightbox="models" data-title="imagen4">
+        <img src="PASAPORTE.PNG" alt="">
+    </a>
+    </div>
+
+    <div class="galeria_item">
+        <a href="REGISTROCIVIL.PNG" data-lightbox="models" data-title="imagen5">
+        <img src="REGISTROCIVIL.PNG" alt="">
+    </a>
+    </div>
+
+    <div class="galeria_item">
+        <a href="LICENCIA.PNG" data-lightbox="models" data-title="imagen6">
+        <img src="LICENCIA.PNG" alt="">
+    </a>
+    </div>
+
+    <div class="galeria_item">
+        <a href="SAT.PNG" data-lightbox="models" data-title="imagen7">
+        <img src="SAT.PNG" alt="">
+    </a>
+    </div>
+
+    <div class="galeria_item">
+        <a href="CONSTANCIA.PNG" data-lightbox="models" data-title="imagen8">
+        <img src="CONSTANCIA.PNG" alt="">
+    </a>
+    </div>
+
+    <div class="galeria_item">
+        <a href="SEGURO.PNG" data-lightbox="models" data-title="imagen9">
+        <img src="SEGURO.PNG" alt="">
+    </a>
+    </div>
+
+    <div class="galeria_item">
+        <a href="CURP.PNG" data-lightbox="models" data-title="imagen10">
+        <img src="CURP.PNG" alt="">
+    </a>
+    </div>
+</main>
+        </section>
+
+      
+</body>
+</html>

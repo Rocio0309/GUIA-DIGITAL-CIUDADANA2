@@ -1,0 +1,97 @@
+/* Fondo general */
+body {
+  font-family: 'Raleway', Arial, sans-serif;
+  background: linear-gradient(135deg, #B19CD9, #D8BFD8, #E0BBE4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+/* Título principal */
+.titulo {
+  text-align: center;
+  font-size: 28px;
+  color: #6A5ACD;
+  margin-bottom: 20px;
+}
+
+/* Contenedor del formulario tipo burbuja */
+#form-visitante {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 40px 50px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: aparecer 0.8s ease;
+  margin: 20px auto;
+}
+
+/* Animación de aparición */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Título del formulario */
+#form-visitante h2 {
+  color: #6A5ACD;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Inputs de texto */
+#form-visitante input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 20px;
+  border: 1.5px solid #B19CD9;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+#form-visitante input[type="text"]:focus {
+  border-color: #6A5ACD;
+  box-shadow: 0 0 8px rgba(106, 90, 205, 0.4);
+}
+
+/* Botón de envío */
+#form-visitante input[type="submit"] {
+  background: #B19CD9;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+#form-visitante input[type="submit"]:hover {
+  background: #A391E8;
+  transform: scale(1.05);
+}
+
+/* Mensajes de éxito o error */
+h3.correcto {
+  color: #4CAF50;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 15px;
+}
+
+h3.incorrecto {
+  color: #E74C3C;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 15px;
+}

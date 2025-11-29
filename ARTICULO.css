@@ -1,0 +1,9 @@
+#articulocecytem {
+	width:1000px;
+	padding: 30px;
+	border: 15px solid;
+	border-color: #D2B4DE;
+	column-count: 2;
+	column-gap: 50px;
+
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Trámites y Pagos · Valle de Bravo</title>
+  <style>
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background-color: #fef9f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ffe5ec;
+      color: #333;
+      text-align: center;
+      padding: 30px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    main {
+      max-width: 700px;
+      margin: 30px auto;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      padding: 30px;
+    }
+    h2 {
+      color: #6a5acd;
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    ul {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #444;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    footer {
+      background-color: #ffe5ec;
+      text-align: center;
+      padding: 15px;
+      color: #555;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .gallery-item {
+      width: 220px;
+      background-color: #fff3f8;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 8px;
+    }
+    .gallery-item img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .gallery-item a {
+      display: block;
+      margin: 8px 0;
+      color: #6a5acd;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .gallery-item a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Trámites y Pagos · Valle de Bravo
+  </header>
+
+  <main>
+     <section>
+      <h2>¿Dónde puedo realizar mis pagos?</h2>
+      <p>Si necesitas pagar impuestos o servicios municipales en Valle de Bravo, tienes varias opciones disponibles:</p>
+    </section>
+
+    <section>
+      <h2>💳 Algunos Pagos en línea</h2>
+      <p>Puedes hacerlo desde el sitio oficial del Ayuntamiento:</p>
+      <p><strong>Sitio web:</strong> <a href="https://valledebravo.gob.mx/" target="_blank">valledebravo.gob.mx</a></p>
+      <p>Ahí podrás pagar el impuesto predial, agua potable, licencias o permisos. Recibirás un comprobante digital.</p>
+    </section>
+
+
+
+    <section>
+      <h2>🏪 Puntos físicos autorizados</h2>
+      <ul>
+        <li><strong>Tiendas de conveniencia:</strong> OXXO, Extra. Solo necesitas tu línea de captura.</li>
+        <li><strong>Supermercados:</strong> La Comer, Soriana, Chedraui (verifica si tu pago está habilitado).</li>
+        <li><strong>Bancos:</strong> BBVA, Banorte, Citibanamex, Santander y HSBC.</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="gallery">
+        <!-- OXXO Av del Carmen 14 -->
+        <div class="gallery-item">
+          <a href="https://www.google.com/maps/place/Oxxo/@19.1624941,-100.1220337,17z/data=!3m1!5s0x85cd64f6789c51b1:0xb8a003c36929d20!4m15!1m8!3m7!1s0x85cd64f678a0e8db:0x5b9b7397c3ba241d!2sDel+Carmen+14,+Avandaro,+51200+Valle+de+Bravo,+M%C3%A9x.!3b1!8m2!3d19.1632846!4d-100.1231388!16s%2Fg%2F11q2nlchx3!3m5!1s0x85cd64f5d5c8de53:0x1c0525bb2665cfaf!8m2!3d19.16302!4d-100.12279!16s%2Fg%2F11b6mk_f0t?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">OXXO Av del Carmen 14</a>
+          <img src="OAV.PNG" alt="OXXO Av del Carmen 14">
+        </div>
+        <!-- OXXO Calle Francisco González Bocanegra 316‑C -->
+        <div class="gallery-item">
+          <a href="https://www.google.com/maps/search/?api=1&query=Calle+Francisco+Gonzalez+Bocanegra+316C+Valle+de+Bravo" target="_blank">OXXO Calle Francisco González Bocanegra 316‑C</a>
+          <img src="OBOCA.PNG" alt="OXXO Calle Francisco González Bocanegra">
+        </div>
+        <!-- Soriana Súper Valle de Bravo -->
+        <div class="gallery-item">
+          <a href="https://www.google.com/maps/place/Soriana+S%C3%BAper+-+Valle+de+Bravo/@19.203566,-100.1329437,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipNqtmh73qbopFOC2oxhGoZ2gCgwb4fsqSKlF4Tc!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipNqtmh73qbopFOC2oxhGoZ2gCgwb4fsqSKlF4Tc%3Dw203-h270-k-no!7i3000!8i4000!4m7!3m6!1s0x85cd6384d373e321:0xacbbeac496b2c674!8m2!3d19.2034999!4d-100.1331469!10e5!16s%2Fg%2F11b6j5p5_7?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Soriana Súper Valle de Bravo</a>
+          <img src="SVB.PNG" alt="Soriana Valle de Bravo">
+        </div>
+        <!-- Chedraui Valle de Bravo -->
+        <div class="gallery-item">
+          <a href="https://www.google.com/maps/search/?api=1&query=Blvd+Juan+Herrera+y+Pi%C3%B1a+%237+Valle+de+Bravo" target="_blank">Chedraui Valle de Bravo</a>
+          <img src="CVB.PNG" alt="Chedraui Valle de Bravo">
+        </div>
+        <!-- BBVA Sucursal 5 de Febrero 107 -->
+        <div class="gallery-item">
+          <a href="https://www.google.com/maps/search/?api=1&query=5+de+Febrero+107+Valle+de+Bravo" target="_blank">BBVA Sucursal 5 de Febrero 107</a>
+          <img src="BVB.PNG" alt="BBVA Valle de Bravo">
+        </div>
+         <!-- Banamex Valle de Bravo -->
+       <div class="gallery-item">
+      <a href="https://www.google.com/maps/search/?api=1&query=Banamex+Valle+de+Bravo" target="_blank">Banamex Valle de Bravo</a>
+      <img src="BANAMEX.PNG" alt="Banamex Valle de Bravo">
+      </div>
+      
+    </section>
+
+    <section>
+      <h2>🏛 Oficina Municipal</h2>
+      <p><strong>Tesorería Municipal de Valle de Bravo</strong></p>
+      <p>📍 Dirección: Calle 5 de Febrero #100, Col. Centro, Valle de Bravo, Edo. de Méx.</p>
+      <p>📞 Teléfono: (726) 262‑8060</p>
+      <p>✉️ Correo: ayuntamientovb@valledebravo.gob.mx</p>
+      <p><em>Consejo:</em> Lleva tu identificación y una copia impresa de tu línea de captura para agilizar el trámite.</p>
+    </section>
+
+    <section>
+      <h2>🔒 Recomendaciones</h2>
+      <ul>
+        <li>Realiza tus pagos solo en sitios oficiales o establecimientos autorizados.</li>
+        <li>Conserva tus comprobantes por al menos seis meses.</li>
+        <li>Si tienes dudas, contacta primero a la Tesorería antes de repetir un pago.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Rocío Gutiérrez, Ian Cruz | Información pública de apoyo al ciudadano
+  </footer>
+
+</body>
+</html>

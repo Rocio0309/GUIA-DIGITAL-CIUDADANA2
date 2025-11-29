@@ -1,0 +1,90 @@
+<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
+<html lang="es"> <! -- Documento en español -->
+<head> 
+ <meta charset="UTF-8"> <!-- Codificación de caracteres (acentos, ñ, etc.) -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta el diseño a móviles -->
+ <title>Menú con Submenú</title> <!-- Título que aparece en la pestaña -->
+ <style>
+   body {
+      margin: 0; /*Elimina margenes por defecto */
+      font-famyli: Arial, sans-serif; /*Fuente del texto */
+     }
+     /* ---- ESTILO DEL MENU PRINCIPAL ---- */
+      nav{
+      background: #E74C3E50; /* Fondo gris oscuro */
+      }
+      nav ul {
+       list-style: none; /* Quita viñetas de la lista */
+       margin: 0; /* Elimina margenes */
+       padding: 0; /* Elimina relleno */
+       display: flex;  /* Coloca los  <li> en linea (horizontal) */
+      }
+      nav ul li {
+      position: relative; /*Necesario para posicionar el submenu debajo */
+      }
+      nav ul li a {
+      display: block; /*Hace que todo el area se clickeable */
+      padding: 15px 20px; /*Espacio interno */
+      color: white; /*Texto blanco*/
+      text-decoration: none; /* Quita el subrayado */
+      }
+      nav ul li a:hover {
+      background: #; /* Cambia el fondo al pasar el raton */
+      }
+
+      /* --- ESTILO DEL SUBMENU ---*/
+      nav ul li ul{
+        display: none;      /* ocultar el submenu por defecto */
+        position: absolute; /* posiciona el sub menu relativo al padre */
+        top: 100%;          /* lo coloca justo de bajo del elemento padre */
+        left: 0;            /* alineado a la izquierda */
+        background: #ECF0F1;   /* fondo del submenu */
+        padding: 0;         /* sin espacio interno */
+        min-width: 180px;       /* ancho minimo del submenu */
+     }  
+     nav ul li ul li a {
+      padding: 10px 15px;   /*espaciado interno en las opciones */
+     }
+     nav ul li ul li a:hover{
+      background: #8E44AD;     /* color mas claro al pasra el raton */
+     }
+
+     /* --- MOSTRAR EL SUBMENU --- */
+     nav ul li:hover > ul {
+      display: block; /*cuando paso el raton sobre el <li>, muetra el submenu*/
+     }
+   </style>
+ </head>
+<body>  
+ <!--Menu principal-->
+      <nav>
+        <ul>
+        <li>
+           <p><a href=" https://gobmx.page/ActaNacimiento/">ACTA</a></p> <!--lecha indicando submenu-->
+           
+              <li><a href=" https://www.gob.mx/ActaNacimiento/folioSeguimiento/">Folio</a></li>
+           </ul>
+           
+        <ul>
+        <li>
+           <p><a href="https://www.gob.mx/curp/">CURP</a></p> <!--lecha indicando submenu-->
+           
+          </li>
+          
+         
+        <nav>
+        <ul>
+        <li>
+           <p> <a href="https://share.google/7ZWnSaU9mCdwy5HCt ">LICENCIA</a> </p> <!-- Flecha indicando submenu-->
+            <ul>
+              <li><a href=" https://smovilidad.edomex.gob.mx/citas_internet">Agendar Cita</a></li>
+              <li><a href="#">.......</a></li>
+              <li><a href="#">.......</a></li>
+            </ul>
+          </li>
+        
+</body>
+</html>
+
+
+     

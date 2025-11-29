@@ -1,0 +1,102 @@
+/* Fondo general */
+body {
+  font-family: 'Raleway', Arial, sans-serif;
+  background: linear-gradient(135deg, #B19CD9, #D8BFD8, #E0BBE4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+/* Título principal */
+.titulo {
+  text-align: center;
+  font-size: 28px;
+  color: #6A5ACD;
+  margin-bottom: 20px;
+}
+
+/* Contenedor del formulario tipo burbuja */
+form {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 25px !important;
+  padding: 40px 50px !important;
+  width: 400px !important;
+  text-align: center !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+  animation: aparecer 0.8s ease;
+}
+
+/* Animación de aparición */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Título del formulario */
+form h2 {
+  color: #6A5ACD;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Inputs de texto */
+input[type="text"] {
+  width: 100% !important;
+  padding: 12px !important;
+  margin: 10px 0 !important;
+  border-radius: 20px !important;
+  border: 1.5px solid #B19CD9 !important;
+  outline: none !important;
+  font-size: 15px !important;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #6A5ACD !important;
+  box-shadow: 0 0 8px rgba(106, 90, 205, 0.4) !important;
+}
+
+/* Botón de envío */
+input[type="submit"] {
+  background: #B19CD9 !important;
+  color: white !important;
+  border: none !important;
+  padding: 12px 30px !important;
+  border-radius: 25px !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.3s ease !important;
+}
+
+input[type="submit"]:hover {
+  background: #A391E8 !important;
+  transform: scale(1.05) !important;
+}
+
+/* Mensajes de éxito o error */
+h3.correcto {
+  color: #4CAF50 !important;
+  font-weight: bold !important;
+  font-size: 1.1em !important;
+  margin-top: 15px !important;
+}
+
+h3.incorrecto {
+  color: #E74C3C !important;
+  font-weight: bold !important;
+  font-size: 1.1em !important;
+  margin-top: 15px !important;
+}
