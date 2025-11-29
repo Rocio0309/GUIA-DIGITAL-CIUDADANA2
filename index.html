@@ -202,5 +202,90 @@
  <script>
    function toggleMenu() {
      const menu = document.getElementById("menu");
+     menu.style.display = (menu.style.display === "flex" || menu.style.display === "") ? "none" : "flex";
+   }
+ </script>
 
+</head>
+<body>
+
+  <!-- Botón hamburguesa -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <!-- Menu principal -->
+  <nav>
+    <img src="LOGOCECY.PNG" alt="Logo" class="logo">
+
+    <form method="get" action="https://www.google.com/search" target="_blank">
+        <input type="search" name="q" placeholder="Introducir búsqueda" autofocus required>
+        <input type="submit">
+    </form>
+
+<ul id="menu">
+      <li><p><a href="ciudadano2.html">CIUDADANO</a></p></li>
+
+      <li> 
+        <p><a href="#">INFORMACION</a></p>
+        <ul>
+          <li><a href="INFO.html">INFORMACION</a></li>
+          <li><a href="GALERIAMP4.html">¿Como realizar tramites?</a></li>
+          <li><a href="#">.......</a></li>
+        </ul>
+      </li>
+
+      <li> 
+        <p><a href="#">TRÁMITES</a></p>
+        <ul>
+          <li><a href="tramites.html">Ciudadanos administrativos</a></li>
+          <li><a href="gestionartramite.html">Gestionar Trámite</a></li>
+          <li><a href="#">.......</a></li>
+        </ul>
+      </li>
+
+      <li><p><a href="SOLICITUD.html">SOLICITUD</a></p></li>
+
+      <li>  
+        <p><a href="#">PAGO</a></p>
+        <ul>
+          <li><a href="PAGOS.html">Servicios y derechos</a></li>
+          <li><a href="">.......</a></li>
+          <li><a href="#">.......</a></li>
+        </ul>
+      </li>
+
+      <li>  
+        <p><a href="#">DOCUMENTOS</a></p>
+        <ul>
+          <li><a href="GALERIA.html">Galería</a></li>
+          <li><a href="#">.......</a></li>
+          <li><a href="#">.......</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <p><a href="MENU.html">VISITANTES</a></p>
+        <ul>
+          <li><a href="index2.html">Registros</a></li>
+          <li><a href="#">.......</a></li>
+          <li><a href="#">.......</a></li>
+        </ul>
+      </li>
+
+      <li>
+         <p><a href="https://share.google/Q5YCviwYntzpR3B4T">AYUNTAMIENTO 2025</a></p>
+      </li>
+
+      <li>
+        <a href="index3.html" class="dudas-link">
+          <img src="DUDA.png" alt="Dudas" class="icono-dudas">
+          <span class="texto-dudas">DUDAS</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <img src="IMGC.png" alt="Imagen grande" class="hero-image">
+
+</body>
+</html>
 
