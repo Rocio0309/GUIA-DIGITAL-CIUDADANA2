@@ -25,14 +25,14 @@
       position: absolute;
       right: 20px;
       font-size: 32px;
-      color: white;
+      color: #ffffff;
       cursor: pointer;
       z-index: 20;
    }
 
    /* ---- ESTILO DEL MENU PRINCIPAL ---- */
    nav {
-      background: #E74C3E50;
+      background: rgba(255, 183, 197, 0.55); /* rosa pastel */
       position: relative;
       padding-left: 60px;
       height: 70px;
@@ -50,7 +50,6 @@
       height: auto;
    }
 
-   /* LISTA PRINCIPAL DEL MENÚ */
    nav ul {
        list-style: none;
        margin: 0;
@@ -72,25 +71,24 @@
        color: white;
        text-decoration: none;
        font-weight: 600;
-       background: #B19CD9;
+       background: #C8A2C8; /* lila pastel */
        border-radius: 25px;
        box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
        transition: all 0.3s ease;
    }
 
    nav ul li a:hover {
-       background: #D8BFD8;
+       background: #E6DAF0; /* lila muy clarito pastel */
        transform: translateY(-2px);
        box-shadow: 0px 6px 10px rgba(0,0,0,0.25);
    }
 
-   /* SUBMENÚS */
    nav ul li ul {
        display: none;
        position: absolute;
        top: 100%;
        left: 0;
-       background: #D8BFD8;
+       background: #E6DAF0; /* pastel */
        padding: 5px;
        min-width: 180px;
        border-radius: 12px;
@@ -105,7 +103,7 @@
    }
 
    nav ul li ul li a:hover {
-       background: #B19CD9;
+       background: #C8A2C8;
        color: white;
    }
 
@@ -113,15 +111,24 @@
        display: block;
    }
 
-   /* ---- IMAGEN DEBAJO DEL MENÚ ---- */
+   /* --------------------------------------------------
+      IMAGEN GRANDE DEBAJO DEL MENÚ - AJUSTADA COMPLETA
+      CON EFECTO PASTEL/BLUR
+     -------------------------------------------------- */
    .hero-image {
       width: 100%;
-      height: calc(115vh - 70px);
-      object-fit: cover;
+      height: auto;
+      max-height: calc(100vh - 70px);
+      object-fit: contain;       /* No se corta */
+      background: #FDEEF4;       /* rosa pastel suave */
       display: block;
+
+      /* ✨ Efecto blur y pastel */
+      filter: blur(2px) brightness(1.1) saturate(1.1);
+      border-radius: 10px;
    }
 
-   /* ---- DUDAS ---- */
+   /* DUDAS */
    .icono-dudas {
       width: 30px;
       height: 30px;
@@ -154,9 +161,8 @@
    }
 
 
-
    /* ================================
-      🔹 RESPONSIVE PARA CELULARES
+      RESPONSIVE PARA CELULARES
      ================================ */
    @media (max-width: 850px) {
 
@@ -173,7 +179,7 @@
       nav ul {
          flex-direction: column;
          width: 100%;
-         background: #E74C3E;
+         background: #FFB7C5; /* rosa pastel */
          display: none;
          padding: 20px 0;
          border-radius: 0 0 15px 15px;
@@ -189,13 +195,17 @@
          left: 0;
          width: 100%;
          display: none;
-         background: #C8A2C8;
+         background: #E6DAF0;
       }
 
       nav ul li:hover > ul {
          display: block;
       }
 
+      .hero-image {
+         object-fit: contain; /* ⭐ sigue completa */
+         max-height: 500px;
+      }
    }
  </style>
 
@@ -209,10 +219,8 @@
 </head>
 <body>
 
-  <!-- Botón hamburguesa -->
   <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-  <!-- Menu principal -->
   <nav>
     <img src="LOGOCECY.PNG" alt="Logo" class="logo">
 
@@ -228,7 +236,7 @@
         <p><a href="#">INFORMACION</a></p>
         <ul>
           <li><a href="INFO.html">INFORMACION</a></li>
-          <li><a href="GALERIAMP4.html">¿Como realizar tramites?</a></li>
+          <li><a href="GALERIAMP4.html">¿Cómo realizar trámites?</a></li>
           <li><a href="#">.......</a></li>
         </ul>
       </li>
@@ -288,4 +296,3 @@
 
 </body>
 </html>
-
