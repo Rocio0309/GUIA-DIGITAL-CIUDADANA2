@@ -5,14 +5,29 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Menú con Submenú</title>
+
  <!-- Fuente Raleway -->
  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+
  <style>
    body {
       margin: 0;
       font-family: 'Raleway', Arial, sans-serif;
       background: #f9f9f9;
       overflow-x: hidden;
+   }
+
+   /* -------------------------
+      BOTÓN HAMBURGUESA
+   ------------------------- */
+   .hamburger {
+      display: none;
+      position: absolute;
+      right: 20px;
+      font-size: 32px;
+      color: white;
+      cursor: pointer;
+      z-index: 20;
    }
 
    /* ---- ESTILO DEL MENU PRINCIPAL ---- */
@@ -35,6 +50,7 @@
       height: auto;
    }
 
+   /* LISTA PRINCIPAL DEL MENÚ */
    nav ul {
        list-style: none;
        margin: 0;
@@ -42,6 +58,7 @@
        display: flex;
        gap: 10px;
        align-items: center;
+       transition: all .3s ease;
    }
 
    nav ul li {
@@ -67,6 +84,7 @@
        box-shadow: 0px 6px 10px rgba(0,0,0,0.25);
    }
 
+   /* SUBMENÚS */
    nav ul li ul {
        display: none;
        position: absolute;
@@ -103,7 +121,7 @@
       display: block;
    }
 
-   /* ---- BOTÓN DE IMAGEN (DUDAS) ---- */
+   /* ---- DUDAS ---- */
    .icono-dudas {
       width: 30px;
       height: 30px;
@@ -124,87 +142,65 @@
       color: white;
       font-weight: 600;
       margin-top: 1px;
-      display: block;
       text-align: center;
    }
 
-   /* ---- CONTENEDOR DEL ENLACE DUDAS ---- */
    .dudas-link {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      background: transparent;
    }
- </style> 
-</head>
-<body>
-  <!-- Menu principal -->
-  <nav>
-    <img src="LOGOCECY.PNG" alt="Logo" class="logo">
-    <form method="get" action="https://www.google.com/search" target="_blank">
-        <input type="search" name="q" placeholder="introducir busqueda"autofocus required>
-        <input type="submit">
-    </form>
-<ul>
-      <li><p><a href="ciudadano2.html">CIUDADANO</a></p></li>
-      <li> 
-        <p><a href="#">INFORMACION</a></p>
-        <ul>
-          <li><a href="INFO.html">INFORMACION</a></li>
-          <li><a href="GALERIAMP4.html">¿Como relizar tramites?</a></li>
-          <li><a href="#">.......</a></li>
-        </ul>
-      </li>
-      <li> 
-        <p><a href="#">TRÁMITES</a></p>
-        <ul>
-          <li><a href="tramites.html">Ciudadanos administrativos</a></li>
-          <li><a href="gestionartramite.html">Gestionar Trámite</a></li>
-          <li><a href="#">.......</a></li>
-        </ul>
-      </li>
-      <li><p><a href="SOLICITUD.html">SOLICITUD</a></p></li>
-      <li>  
-        <p><a href="#">PAGO</a></p>
-        <ul>
-          <li><a href="PAGOS.html">Servicios y derechos</a></li>
-          <li><a href="">.......</a></li>
-          <li><a href="#">.......</a></li>
-        </ul>
-      </li>
-      <li>  
-        <p><a href="#">DOCUMENTOS</a></p>
-        <ul>
-          <li><a href="GALERIA.html">Galería</a></li>
-          <li><a href="#">.......</a></li>
-          <li><a href="#">.......</a></li>
-        </ul>
-      </li>
-      <li>
-        <p><a href="MENU.html">VISITANTES</a></p>
-        <ul>
-          <li><a href="index2.html">Registros</a></li>
-          <li><a href="#">.......</a></li>
-          <li><a href="#">.......</a></li>
-        </ul>
-      </li>
-      <li>
-         <p><a href="https://share.google/Q5YCviwYntzpR3B4T">AYUNTAMIENTO 2025</a></p>
-      </li>
 
-      <!-- 🔹 Botón de DUDAS más pequeño y centrado -->
-      <li>
-        <a href="index3.html" class="dudas-link">
-          <img src="DUDA.png" alt="Dudas" class="icono-dudas">
-          <span class="texto-dudas">DUDAS</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
 
-  <!-- Imagen grande debajo del menú -->
-  <img src="IMGC.png" alt="Imagen grande" class="hero-image">
-</body>
-</html>
+
+   /* ================================
+      🔹 RESPONSIVE PARA CELULARES
+     ================================ */
+   @media (max-width: 850px) {
+
+      .hamburger {
+         display: block;
+      }
+
+      nav {
+         height: auto;
+         padding-left: 50px;
+         padding-right: 50px;
+      }
+
+      nav ul {
+         flex-direction: column;
+         width: 100%;
+         background: #E74C3E;
+         display: none;
+         padding: 20px 0;
+         border-radius: 0 0 15px 15px;
+      }
+
+      nav ul li {
+         width: 100%;
+      }
+
+      nav ul li ul {
+         position: relative;
+         top: 0;
+         left: 0;
+         width: 100%;
+         display: none;
+         background: #C8A2C8;
+      }
+
+      nav ul li:hover > ul {
+         display: block;
+      }
+
+   }
+ </style>
+
+ <script>
+   function toggleMenu() {
+     const menu = document.getElementById("menu");
+
+
