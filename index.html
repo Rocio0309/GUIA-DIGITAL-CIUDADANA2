@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menú con submenu</title>
+<title>Menú App Estético Fondo Fijo</title>
 
 <!-- Fuente Raleway -->
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
@@ -17,19 +17,6 @@
     overflow-x: hidden;
   }
 
-  /* -------------------------
-     BOTÓN HAMBURGUESA
-  ------------------------- */
-  .hamburger {
-    display: none;
-    position: absolute;
-    right: 20px;
-    font-size: 32px;
-    color: #ffffff;
-    cursor: pointer;
-    z-index: 20;
-  }
-
   /* ---- MENU COMPUTADORA ---- */
   nav {
     background: rgba(231, 76, 60, 0.5); /* rojo semi */
@@ -38,7 +25,7 @@
     height: 70px;
     display: flex;
     align-items: center;
-    z-index: 10;
+    z-index: 20;
   }
 
   nav img.logo {
@@ -109,13 +96,22 @@
     display: block;
   }
 
-  /* Imagen grande computadora */
+  /* Imagen computadora normal */
   .hero-image {
     width: 100%;
     height: auto;
-    max-height: calc(115vh - 70px);
+    max-height: calc(100vh - 70px);
     object-fit: contain;
     display: block;
+    z-index: 0;
+  }
+
+  /* Contenedor contenido */
+  .contenido {
+    position: relative;
+    z-index: 10;
+    margin-top: 70px;
+    padding: 15px;
   }
 
   /* DUDAS */
@@ -157,12 +153,18 @@
 
     .hamburger {
       display: block;
+      position: absolute;
+      right: 20px;
+      font-size: 32px;
+      color: #ffffff;
+      cursor: pointer;
+      z-index: 30;
     }
 
     nav {
       height: auto;
       padding: 15px 20px;
-      background: #FFB7C5; /* rosa pastel */
+      background: #FFB7C5; /* rosa pastel celular */
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
       flex-direction: column;
@@ -215,15 +217,24 @@
       display: block;
     }
 
-    /* Imagen estilo app celular */
+    /* Imagen extendida celular tipo app */
     .hero-image {
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
-      max-height: 450px;
-      border-radius: 15px;
+      height: 200vh; /* largo extendido */
       object-fit: cover;
       filter: blur(1.5px) brightness(1.2) saturate(1.1);
       background: linear-gradient(135deg, #FFE0F0, #FFDDEE);
-      margin-top: 15px;
+      z-index: 0;
+    }
+
+    .contenido {
+      position: relative;
+      z-index: 10;
+      margin-top: 70px;
+      padding: 15px;
     }
 
     .dudas-link {
@@ -254,7 +265,6 @@ function toggleMenu() {
 
     <ul id="menu">
       <li><p><a href="ciudadano2.html">CIUDADANO</a></p></li>
-
       <li> 
         <p><a href="#">INFORMACION</a></p>
         <ul>
@@ -262,7 +272,6 @@ function toggleMenu() {
           <li><a href="GALERIAMP4.html">¿Cómo realizar trámites?</a></li>
         </ul>
       </li>
-
       <li> 
         <p><a href="#">TRÁMITES</a></p>
         <ul>
@@ -270,34 +279,28 @@ function toggleMenu() {
           <li><a href="gestionartramite.html">Gestionar Trámite</a></li>
         </ul>
       </li>
-
       <li><p><a href="SOLICITUD.html">SOLICITUD</a></p></li>
-
       <li>  
         <p><a href="#">PAGO</a></p>
         <ul>
           <li><a href="PAGOS.html">Servicios y derechos</a></li>
         </ul>
       </li>
-
       <li>  
         <p><a href="#">DOCUMENTOS</a></p>
         <ul>
           <li><a href="GALERIA.html">Galería</a></li>
         </ul>
       </li>
-
       <li>
         <p><a href="MENU.html">VISITANTES</a></p>
         <ul>
           <li><a href="index2.html">Registros</a></li>
         </ul>
       </li>
-
       <li>
          <p><a href="https://share.google/Q5YCviwYntzpR3B4T">AYUNTAMIENTO 2025</a></p>
       </li>
-
       <li>
         <a href="index3.html" class="dudas-link">
           <img src="DUDA.png" alt="Dudas" class="icono-dudas">
@@ -308,6 +311,11 @@ function toggleMenu() {
   </nav>
 
   <img src="IMGC.png" alt="Imagen grande" class="hero-image">
+
+  <div class="contenido">
+    <!-- Aquí va el contenido de tu página -->
+    <p>Aquí tu contenido principal...</p>
+  </div>
 
 </body>
 </html>
