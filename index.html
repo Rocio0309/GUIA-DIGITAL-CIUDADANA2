@@ -1,220 +1,243 @@
 <!DOCTYPE html>
 <script src="CHIO.JS"></script>
 <html lang="es">
-<head> 
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Menú con Submenú</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú App Estético</title>
 
- <!-- Fuente Raleway -->
- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+<!-- Fuente Raleway -->
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
 
- <style>
-   body {
-      margin: 0;
-      font-family: 'Raleway', Arial, sans-serif;
-      background: #f9f9f9;
-      overflow-x: hidden;
-   }
+<style>
+  body {
+    margin: 0;
+    font-family: 'Raleway', Arial, sans-serif;
+    background: #f9f9f9;
+    overflow-x: hidden;
+  }
 
-   /* -------------------------
-      BOTÓN HAMBURGUESA
-   ------------------------- */
-   .hamburger {
-      display: none;
-      position: absolute;
-      right: 20px;
-      font-size: 32px;
-      color: #ffffff;
-      cursor: pointer;
-      z-index: 20;
-   }
+  /* -------------------------
+     BOTÓN HAMBURGUESA
+  ------------------------- */
+  .hamburger {
+    display: none;
+    position: absolute;
+    right: 20px;
+    font-size: 32px;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 20;
+  }
 
-   /* ---- ESTILO DEL MENU PRINCIPAL ---- */
-   nav {
-      background: rgba(255, 183, 197, 0.55); /* rosa pastel */
-      position: relative;
-      padding-left: 60px;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      z-index: 10;
-   }
+  /* ---- MENU COMPUTADORA ---- */
+  nav {
+    background: rgba(231, 76, 60, 0.5); /* rojo semi */
+    position: relative;
+    padding-left: 60px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+  }
 
-   /* Imagen del logo */
-   nav img.logo {
-      position: absolute;
-      top: 15px;
-      left: 10px;
-      width: 40px;
-      height: auto;
-   }
+  nav img.logo {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 40px;
+    height: auto;
+  }
 
-   nav ul {
-       list-style: none;
-       margin: 0;
-       padding: 0;
-       display: flex;
-       gap: 10px;
-       align-items: center;
-       transition: all .3s ease;
-   }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
 
-   nav ul li {
-       position: relative;
-       text-align: center;
-   }
+  nav ul li {
+    position: relative;
+    text-align: center;
+  }
 
-   nav ul li a {
-       display: block;
-       padding: 12px 22px;
-       color: white;
-       text-decoration: none;
-       font-weight: 600;
-       background: #C8A2C8; /* lila pastel */
-       border-radius: 25px;
-       box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
-       transition: all 0.3s ease;
-   }
+  nav ul li a {
+    display: block;
+    padding: 12px 22px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    background: #B19CD9;
+    border-radius: 25px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
 
-   nav ul li a:hover {
-       background: #E6DAF0; /* lila muy clarito pastel */
-       transform: translateY(-2px);
-       box-shadow: 0px 6px 10px rgba(0,0,0,0.25);
-   }
+  nav ul li a:hover {
+    background: #D8BFD8;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 10px rgba(0,0,0,0.25);
+  }
 
-   nav ul li ul {
-       display: none;
-       position: absolute;
-       top: 100%;
-       left: 0;
-       background: #E6DAF0; /* pastel */
-       padding: 5px;
-       min-width: 180px;
-       border-radius: 12px;
-       box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-   }  
+  nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #D8BFD8;
+    padding: 5px;
+    min-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  }  
 
-   nav ul li ul li a {
-       padding: 10px 15px;
-       color: white;
-       background: transparent;
-       border-radius: 15px;
-   }
+  nav ul li ul li a {
+    padding: 10px 15px;
+    color: white;
+    background: transparent;
+    border-radius: 15px;
+  }
 
-   nav ul li ul li a:hover {
-       background: #C8A2C8;
-       color: white;
-   }
+  nav ul li ul li a:hover {
+    background: #B19CD9;
+    color: white;
+  }
 
-   nav ul li:hover > ul {
-       display: block;
-   }
+  nav ul li:hover > ul {
+    display: block;
+  }
 
-   /* --------------------------------------------------
-      IMAGEN GRANDE DEBAJO DEL MENÚ - AJUSTADA COMPLETA
-      CON EFECTO PASTEL/BLUR
-     -------------------------------------------------- */
-   .hero-image {
-      width: 100%;
-      height: auto;
-      max-height: calc(100vh - 70px);
-      object-fit: contain;       /* No se corta */
-      background: #FDEEF4;       /* rosa pastel suave */
+  /* Imagen grande computadora */
+  .hero-image {
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 70px);
+    object-fit: contain;
+    display: block;
+  }
+
+  /* DUDAS */
+  .icono-dudas {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .icono-dudas:hover {
+    transform: scale(1.15);
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.25);
+  }
+
+  .texto-dudas {
+    font-size: 10.5px;
+    color: white;
+    font-weight: 600;
+    margin-top: 1px;
+    text-align: center;
+  }
+
+  .dudas-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  /* ===========================
+     RESPONSIVE CELULAR - ESTILO APP
+  ============================ */
+  @media (max-width: 850px) {
+
+    .hamburger {
       display: block;
+    }
 
-      /* ✨ Efecto blur y pastel */
-      filter: blur(2px) brightness(1.1) saturate(1.1);
-      border-radius: 10px;
-   }
-
-   /* DUDAS */
-   .icono-dudas {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      display: block;
-      margin: 0 auto;
-   }
-
-   .icono-dudas:hover {
-      transform: scale(1.15);
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.25);
-   }
-
-   .texto-dudas {
-      font-size: 10.5px;
-      color: white;
-      font-weight: 600;
-      margin-top: 1px;
-      text-align: center;
-   }
-
-   .dudas-link {
-      display: flex;
+    nav {
+      height: auto;
+      padding: 15px 20px;
+      background: #FFB7C5; /* rosa pastel */
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-   }
+      align-items: flex-start;
+    }
 
+    nav ul {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+      padding: 10px 0;
+      gap: 8px;
+      border-radius: 10px;
+      background: #FFDDEE;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
 
-   /* ================================
-      RESPONSIVE PARA CELULARES
-     ================================ */
-   @media (max-width: 850px) {
+    nav ul li {
+      width: 100%;
+    }
 
-      .hamburger {
-         display: block;
-      }
+    nav ul li a {
+      width: 100%;
+      text-align: center;
+      padding: 14px 0;
+      font-size: 18px;
+      border-radius: 15px;
+      background: #C8A2C8; /* lila pastel */
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
 
-      nav {
-         height: auto;
-         padding-left: 50px;
-         padding-right: 50px;
-      }
+    nav ul li a:hover {
+      background: #E6DAF0;
+      transform: translateY(0);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
 
-      nav ul {
-         flex-direction: column;
-         width: 100%;
-         background: #FFB7C5; /* rosa pastel */
-         display: none;
-         padding: 20px 0;
-         border-radius: 0 0 15px 15px;
-      }
+    nav ul li ul {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: none;
+      background: #F8E6F8;
+      border-radius: 12px;
+      padding: 5px 0;
+    }
 
-      nav ul li {
-         width: 100%;
-      }
+    nav ul li:hover > ul {
+      display: block;
+    }
 
-      nav ul li ul {
-         position: relative;
-         top: 0;
-         left: 0;
-         width: 100%;
-         display: none;
-         background: #E6DAF0;
-      }
+    /* Imagen estilo app celular */
+    .hero-image {
+      width: 100%;
+      max-height: 450px;
+      border-radius: 15px;
+      object-fit: cover;
+      filter: blur(1.5px) brightness(1.2) saturate(1.1);
+      background: linear-gradient(135deg, #FFE0F0, #FFDDEE);
+      margin-top: 15px;
+    }
 
-      nav ul li:hover > ul {
-         display: block;
-      }
+    .dudas-link {
+      margin-top: 10px;
+    }
+  }
+</style>
 
-      .hero-image {
-         object-fit: contain; /* ⭐ sigue completa */
-         max-height: 500px;
-      }
-   }
- </style>
-
- <script>
-   function toggleMenu() {
-     const menu = document.getElementById("menu");
-     menu.style.display = (menu.style.display === "flex" || menu.style.display === "") ? "none" : "flex";
-   }
- </script>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display = (menu.style.display === "flex" || menu.style.display === "") ? "none" : "flex";
+}
+</script>
 
 </head>
 <body>
@@ -224,12 +247,12 @@
   <nav>
     <img src="LOGOCECY.PNG" alt="Logo" class="logo">
 
-    <form method="get" action="https://www.google.com/search" target="_blank">
-        <input type="search" name="q" placeholder="Introducir búsqueda" autofocus required>
+    <form method="get" action="https://www.google.com/search" target="_blank" style="margin-left:60px; margin-top:10px;">
+        <input type="search" name="q" placeholder="Buscar..." autofocus required>
         <input type="submit">
     </form>
 
-<ul id="menu">
+    <ul id="menu">
       <li><p><a href="ciudadano2.html">CIUDADANO</a></p></li>
 
       <li> 
@@ -237,7 +260,6 @@
         <ul>
           <li><a href="INFO.html">INFORMACION</a></li>
           <li><a href="GALERIAMP4.html">¿Cómo realizar trámites?</a></li>
-          <li><a href="#">.......</a></li>
         </ul>
       </li>
 
@@ -246,7 +268,6 @@
         <ul>
           <li><a href="tramites.html">Ciudadanos administrativos</a></li>
           <li><a href="gestionartramite.html">Gestionar Trámite</a></li>
-          <li><a href="#">.......</a></li>
         </ul>
       </li>
 
@@ -256,8 +277,6 @@
         <p><a href="#">PAGO</a></p>
         <ul>
           <li><a href="PAGOS.html">Servicios y derechos</a></li>
-          <li><a href="">.......</a></li>
-          <li><a href="#">.......</a></li>
         </ul>
       </li>
 
@@ -265,8 +284,6 @@
         <p><a href="#">DOCUMENTOS</a></p>
         <ul>
           <li><a href="GALERIA.html">Galería</a></li>
-          <li><a href="#">.......</a></li>
-          <li><a href="#">.......</a></li>
         </ul>
       </li>
 
@@ -274,8 +291,6 @@
         <p><a href="MENU.html">VISITANTES</a></p>
         <ul>
           <li><a href="index2.html">Registros</a></li>
-          <li><a href="#">.......</a></li>
-          <li><a href="#">.......</a></li>
         </ul>
       </li>
 
