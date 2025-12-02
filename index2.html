@@ -2,16 +2,37 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GUIA CIUDADANA VISITANTES</title>
-    <!-- Enlazamos solo el CSS del formulario -->
+
     <link rel="stylesheet" type="text/css" href="estilos_formulario.css">
+
+    <style>
+        /* Ajuste sin cambiar diseño: solo tamaño */
+        #form-visitante {
+            width: 100%;
+            max-width: 450px;  /* límite para que no se haga enorme */
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        #form-visitante input {
+            width: 100% !important; /* evita que se salga */
+            box-sizing: border-box;
+        }
+
+        .titulo {
+            text-align: center;
+        }
+    </style>
+
 </head>
+
 <body>
 
     <h1 class="titulo">GUIA CIUDADANA VISITANTES</h1>
 
-    <!-- Le ponemos un ID para que el CSS lo aplique específicamente -->
     <form id="form-visitante" method="post" action="registrar2.php">
         <h2>REGISTRAR VISITA</h2>
         
@@ -26,3 +47,4 @@
 
 </body>
 </html>
+
