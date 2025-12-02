@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<script src="CHIO.JS"></script>
 <html lang="es">
 <head> 
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Menú con Submenú</title>
- <!-- Fuente Raleway -->
  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
  <style>
    body {
@@ -15,7 +13,6 @@
       overflow-x: hidden;
    }
 
-   /* ---- ESTILO DEL MENU PRINCIPAL ---- */
    nav {
       background: #E74C3E50;
       position: relative;
@@ -23,28 +20,10 @@
       height: 70px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       z-index: 10;
    }
 
-@media (max-width: 600px) {
-  body {
-    padding: 10px;
-  }
-  main {
-    padding: 10px;
-  }
-  h1, h2 {
-    font-size: 1.2em;
-    text-align: center;
-  }
-  iframe {
-    width: 100%;
-    height: 200px;
-  }
-}
-
-
-   /* Imagen del logo */
    nav img.logo {
       position: absolute;
       top: 15px;
@@ -95,7 +74,11 @@
        min-width: 180px;
        border-radius: 12px;
        box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-   }  
+   }
+
+   nav ul li:hover > ul {
+       display: block;
+   }
 
    nav ul li ul li a {
        padding: 10px 15px;
@@ -104,16 +87,6 @@
        border-radius: 15px;
    }
 
-   nav ul li ul li a:hover {
-       background: #B19CD9;
-       color: white;
-   }
-
-   nav ul li:hover > ul {
-       display: block;
-   }
-
-   /* ---- IMAGEN DEBAJO DEL MENÚ ---- */
    .hero-image {
       width: 100%;
       height: calc(115vh - 70px);
@@ -121,7 +94,6 @@
       display: block;
    }
 
-   /* ---- BOTÓN DE IMAGEN (DUDAS) ---- */
    .icono-dudas {
       width: 30px;
       height: 30px;
@@ -130,11 +102,6 @@
       cursor: pointer;
       display: block;
       margin: 0 auto;
-   }
-
-   .icono-dudas:hover {
-      transform: scale(1.15);
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.25);
    }
 
    .texto-dudas {
@@ -146,7 +113,6 @@
       text-align: center;
    }
 
-   /* ---- CONTENEDOR DEL ENLACE DUDAS ---- */
    .dudas-link {
       display: flex;
       flex-direction: column;
@@ -155,17 +121,73 @@
       text-decoration: none;
       background: transparent;
    }
+
+   /* ------------------ RESPONSIVE PARA CELULAR ------------------ */
+   @media (max-width: 650px) {
+
+      nav {
+         height: auto;
+         padding: 10px;
+         flex-wrap: wrap;
+         justify-content: center;
+      }
+
+      nav img.logo {
+         position: static;
+         width: 45px;
+         margin-right: 10px;
+      }
+
+      nav ul {
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 5px;
+      }
+
+      nav ul li a {
+         padding: 10px 15px;
+         font-size: 12px;
+      }
+
+      nav ul li ul {
+         position: static;
+         width: 100%;
+         text-align: center;
+         background: #C8B2E0;
+         margin-top: 5px;
+      }
+
+      nav ul li ul li a {
+         font-size: 11px;
+         padding: 8px;
+      }
+
+      .hero-image {
+         height: 55vh;
+         object-fit: cover;
+      }
+
+      form input[type="search"] {
+         width: 180px;
+         padding: 6px;
+      }
+
+      form input[type="submit"] {
+         padding: 6px 10px;
+      }
+   }
  </style> 
 </head>
 <body>
-  <!-- Menu principal -->
   <nav>
     <img src="LOGOCECY.png" alt="Logo" class="logo">
+
     <form method="get" action="https://www.google.com/search" target="_blank">
         <input type="search" name="q" placeholder="introducir busqueda" autofocus required>
         <input type="submit">
     </form>
-<ul>
+
+    <ul>
       <li><p><a href="Ciudadano2.html">CIUDADANO</a></p></li>
       <li> 
         <p><a href="#">INFORMACION</a></p>
@@ -175,6 +197,7 @@
           <li><a href="#">.......</a></li>
         </ul>
       </li>
+
       <li> 
         <p><a href="#">TRÁMITES</a></p>
         <ul>
@@ -183,7 +206,9 @@
           <li><a href="#">.......</a></li>
         </ul>
       </li>
+
       <li><p><a href="SOLICITUD.html">SOLICITUD</a></p></li>
+
       <li>  
         <p><a href="#">PAGO</a></p>
         <ul>
@@ -192,6 +217,7 @@
           <li><a href="#">.......</a></li>
         </ul>
       </li>
+
       <li>  
         <p><a href="#">DOCUMENTOS</a></p>
         <ul>
@@ -200,6 +226,7 @@
           <li><a href="#">.......</a></li>
         </ul>
       </li>
+
       <li>
         <p><a href="MENU.html">VISITANTES</a></p>
         <ul>
@@ -208,11 +235,11 @@
           <li><a href="#">.......</a></li>
         </ul>
       </li>
+
       <li>
          <p><a href="https://share.google/Q5YCviwYntzpR3B4T">AYUNTAMIENTO 2025</a></p>
       </li>
 
-      <!-- 🔹 Botón de DUDAS más pequeño y centrado -->
       <li>
         <a href="duda.html" class="dudas-link">
           <img src="DUDA.png" alt="Dudas" class="icono-dudas">
@@ -222,7 +249,6 @@
     </ul>
   </nav>
 
-  <!-- Imagen grande debajo del menú -->
   <img src="IMGC.png" alt="Imagen grande" class="hero-image">
 </body>
 </html>
